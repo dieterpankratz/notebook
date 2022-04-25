@@ -6,6 +6,15 @@
 
 <a name="2022"></a>
 ## 2022
+* April 2nd:  
+   Started with a plant based diet.
+* March 5th:  
+   Quit my job at McMakler.
+* March 1st:  
+   Adopted a little dog.   
+   ![memo](https://user-images.githubusercontent.com/39704300/165105753-6b52163f-e6df-4f91-9580-23bfa397d1bf.jpg)
+* February 1st:  
+   Moved into a new apartment in Friedrichshain. 
 * January 16th:  
    Joined [Couchers.org](https://couchers.org/) developers team. It is an open source alternative to Couchsurfing and I really love the idea.
 * January 9th:  
