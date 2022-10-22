@@ -10,8 +10,6 @@
    Moved to a new apartment in Prenzlauer-Berg.
 * June:  
    Traveled to Barcelona to meet the team.
-* Mai 1st:
-  I joined N26 as a web engineer.
 * Mai 1st:  
    I joined N26 as a web engineer.
 * April 2nd:  
