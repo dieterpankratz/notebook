@@ -6,6 +6,13 @@
 
 <a name="2022"></a>
 ## 2022
+* September 1st:
+  Moved to a new apartment in Prenzlauer Berg. 
+  No more short term stylez 🎉
+* June:
+  Traveled to Barcelona to meet the team. 
+* Mai 1st:
+  I joined N26 as a web engineer.
 * April 2nd:  
    Started with a plant based diet.
 * March 5th:  
