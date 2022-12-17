@@ -340,18 +340,72 @@ parameter `P` through, which is the key (not the value!). Otherwise: `never`.
 type RelevantDocumentKeys = FilteredKeys<Document, ElementFunction>
 ```
 
+## Unions and Indexing
 
+### Discriminated Union
+Discriminated unions have common properties which are used to
+differentiate between members of the union: 
 
+```
+ */
+type A =
+  | {
+      type: "a";
+      a: string;
+    }
+  | {
+      type: "b";
+      b: string;
+    }
+  | {
+      type: "c";
+      c: string;
+    };
+```
 
+In this case, type is the discriminator.
 
+### How to extract/exclude a type from a discriminated Union?
 
+```
+type Engineer =
+  | {
+      level: "junior";
+      name: string;
+    }
+  | {
+      level: "mid";
+      name: string;
+    }
+  | {
+      level: "senior";
+      name: string;
+};
 
+type JuniorEngineer = Extract<Engineer, { level: "junior" }>;
+type NonJuniorEngineer = Exclude<Engineer, { level: "junior" }>;
+```
 
+The utility type `Extract` will check if any of the members will extend `{ level: "junior" }` and if yes, it will extract the entire member.
 
+### as const
 
+```
+const responseEnumMap = {
+  SUCCESS: 'success',
+  FAILURE: 'failure'
+};
+```
 
+The issue is that `type Success = typeof responseEnumMap['SUCCESS']` will be just `string`.
+To resolve them as their literal values instead we need to add the `as const` annotation to the object:
 
+```
+const responseEnumMap = {
+  SUCCESS: 'success',
+  FAILURE: 'failure'
+} as const;
+```
 
-
-
-
+It does two things, it makes sure that the values are inferred as their literals and it also adds the `READONLY` annotation to them.
+Before we added `as const` the object was mutable, so we were able to do something like responseEnumMap.SUCCESS = 'somethingElse'. That's why TS inferred it correctly just as `string`.
